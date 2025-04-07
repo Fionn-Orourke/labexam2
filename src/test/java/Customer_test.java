@@ -44,14 +44,14 @@ public class Customer_test {
     @Test
 
     void testAddress(){
-        try {
+        //try {
             customer.setAdress("1234567890");
             Assertions.assertTrue(customer.getAdress().length()>=10 && customer.getAdress().length()<=40);
+            Exception exMessage = assertThrows(IllegalArgumentException.class, () -> {customer.getAdress();});
+            System.out.println(exMessage.getMessage());
 
-        }catch ()
-            Throwable exception = Assertions.assertThrows(IllegalArgumentException.class,
-            throw new Exception("e")
-
+        //}catch ()
+            //Throwable exception = Assertions.assertThrows(IllegalArgumentException.class,
 
 
     }
